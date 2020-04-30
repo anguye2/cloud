@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Front end file where inputs of a food cart can be entered -->
+	<h3>Add Food Carts</h3>
+	<div class="recipe-card">
+		<form action="{{ url_for('add') }}" method=POST>
+			<p class="heading">Name: <input type=text name=name></p>
+			<p class="heading">Address: <input type=text name=address></p>
+			<p class="heading">City: <input type=text name=city></p>
+			<p class="heading">State: <input type=text name=state></p>
+			<p class="heading">Zip code: <input type=text name=zipcode></p>
+            <p class="heading">Store Hours: <input type=text name=hour></p>
+            <p class="heading">Phone Number: <input type=text name=phone></p>
+			<p class="heading">Ratings: <input type=text name=rating></p>
+			<p><input type=submit value=Add style="
+					background-color: #4286f4;
+ 				   	color: white;
+    				border: none;
+    				border-radius:5px;
+					padding: 10px 20px;
+					cursor: pointer;"></p>
+		</form>
+	</div>
+
+{% endblock %}
